@@ -6,7 +6,7 @@ import { PrismaClient } from '@prisma/client'
     await prisma.$connect()
     const watch = await prisma.watch.create({
             data: {
-               name: 'SAS'
+               name: 'sus amogus'
             },
         })
     console.log(watch)
