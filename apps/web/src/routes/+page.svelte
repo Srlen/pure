@@ -1,1 +1,5 @@
-<h1>Hello imposter</h1>
+<script>
+	import Watches from "$lib/Watches.svelte";
+
+</script>
+<Watches/>

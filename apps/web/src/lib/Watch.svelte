@@ -1,5 +1,10 @@
 <script lang='ts'>
-    export var watch: Watch
+	import type WatchData from "./types/watch";
 
-    watch.id
+    export var watch: WatchData
+
 </script>
+
+<code>
+{JSON.stringify(watch, null, 4)}
+</code> 

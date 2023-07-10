@@ -7,9 +7,7 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 	}
-	interface Watch {
-		id: string;
-	}
+
 }
 
 export {};
