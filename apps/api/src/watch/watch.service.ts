@@ -10,6 +10,9 @@ export class WatchService {
     return await this.prisma.watch.findMany();
   }
   
+  async getWatch(where: Prisma.WatchWhereUniqueInput): Promise<Watch> {
+    return await this.prisma.watch.findUnique({where})
+  }
   async createWatch(data: Prisma.WatchCreateInput): Promise<Watch> {
     return await this.prisma.watch.create({data})
   }
