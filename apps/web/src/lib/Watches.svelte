@@ -1,17 +1,14 @@
 <script lang="ts">
     import Watch from "$lib/Watch.svelte";
-    import type WatchData from "$lib/types/watch";
-    import { Client } from "$lib/client";
-    const client = new Client() 
-    let watches: WatchData[] ;
-    
+    import client from "$lib/client";
     async function getWatches() {
-        const res = await client.getWatches(
-        )
+            const res = await client.watch.getWatches()
         const { data } = res
         return data
     }
+
 </script>
+
 
 {#await getWatches()}
 <h1>Fetching</h1>

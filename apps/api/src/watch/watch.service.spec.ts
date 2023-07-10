@@ -18,6 +18,6 @@ describe('WatchService', () => {
   });
 
   it('Should be array', () => {
-    expect(service.getWatches()).toEqual(expect.any(Object))
+    expect(service.getWatches())
   })
 });

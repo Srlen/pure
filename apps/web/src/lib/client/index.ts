@@ -1,32 +1,18 @@
 import axios, { type AxiosInstance } from "axios"
 import { env } from '$env/dynamic/public';
+import WatchRoute from "./watch";
 
 export class Client {
     private http: AxiosInstance
+    public watch: WatchRoute
     constructor() {
         this.http = axios.create({baseURL: env.PUBLIC_SERVER_ID})
+        this.watch = new WatchRoute(this.http)
     }
 
-    async getWatches() {
-        return await this.http.get("watch")
-    }
-
-    async getWatch(id: string) {
-        return await this.http.get("watch", {params: { id }})
-    }
-
-    async createWatch(data: object) {
-        return await this.http.post("watch", 
-            data
-        )
-    }
-
-    async updateWatch(data: object) {
-        return await this.http.put("watch", data)
-    }
-
-    async deleteWatch(data: object) {
-        return await this.http.delete("watch", { data })
-    }
 
 }
+
+
+const client = new Client()
+export default client
