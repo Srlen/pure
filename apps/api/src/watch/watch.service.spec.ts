@@ -18,6 +18,6 @@ describe('WatchService', () => {
   });
 
   it('Should be array', () => {
-    expect(service.getWatches())
-  })
+    expect(service.getWatches());
+  });
 });

@@ -7,6 +7,6 @@ import { PrismaModule } from '../prisma/prisma.module';
   controllers: [WatchController],
   providers: [WatchService],
   imports: [PrismaModule],
-  exports: [WatchModule]
+  exports: [WatchModule],
 })
 export class WatchModule {}

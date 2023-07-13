@@ -7,7 +7,7 @@ describe('WatchesService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [PrismaModule]
+      imports: [PrismaModule],
     }).compile();
 
     service = module.get<PrismaService>(PrismaService);
@@ -16,5 +16,4 @@ describe('WatchesService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
-
 });

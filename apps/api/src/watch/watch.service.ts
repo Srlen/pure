@@ -9,12 +9,12 @@ export class WatchService {
   async getWatches(): Promise<Watch[]> {
     return await this.prisma.watch.findMany();
   }
-  
+
   async getWatch(where: Prisma.WatchWhereUniqueInput): Promise<Watch> {
-    return await this.prisma.watch.findUnique({where})
+    return await this.prisma.watch.findUnique({ where });
   }
   async createWatch(data: Prisma.WatchCreateInput): Promise<Watch> {
-    return await this.prisma.watch.create({data})
+    return await this.prisma.watch.create({ data });
   }
 
   async updateWatch(params: {
@@ -29,6 +29,6 @@ export class WatchService {
   }
 
   async deleteWatch(where: Prisma.WatchWhereUniqueInput): Promise<Watch> {
-    return await this.prisma.watch.delete({where})
+    return await this.prisma.watch.delete({ where });
   }
 }

@@ -1,22 +1,12 @@
 <script lang="ts">
-    import Watch from "$lib/Watch.svelte";
-    import client from "$lib/client";
-    async function getWatches() {
-            const res = await client.watch.getWatches()
-        const { data } = res
-        return data
-    }
-
+	import Watch from '$lib/Watch.svelte';
+	import type WatchData from './types/watch';
+	export let watches: WatchData[]
 </script>
 
 
-{#await getWatches()}
-<h1>Fetching</h1>
-{:then watches}
 {#each watches as watch}
-    <Watch {watch}/>
-{/each}
-{:catch error}
-<h1>Error</h1>
-<p>{error}</p>
-{/await}
+		<div class="flex justify-center items-center flex-auto flex-col">
+			<Watch {watch} />
+		</div>
+ذ{/each}

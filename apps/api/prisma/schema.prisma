@@ -17,7 +17,7 @@ model User {
   heartrate Int?
   pressure  Int?
   temp      Int?
-  // watches    Watch[]
+  // watches    Watch[]   
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

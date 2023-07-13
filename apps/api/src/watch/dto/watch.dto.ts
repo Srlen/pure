@@ -1,4 +1,10 @@
-import { IsNotEmpty,  IsOptional, IsNumber, IsString, IsUUID } from "class-validator"
+import {
+  IsNotEmpty,
+  IsOptional,
+  IsNumber,
+  IsString,
+  IsUUID,
+} from 'class-validator';
 
 export class CreateWatchDto {
   @IsNotEmpty()
@@ -22,4 +28,9 @@ export class UpdateWatchDto {
   @IsOptional()
   @IsNumber()
   theme: number;
+}
+
+export class DeleteWatchDto {
+  @IsUUID()
+  id: string;
 }
