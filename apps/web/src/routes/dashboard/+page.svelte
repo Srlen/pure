@@ -1,31 +1,60 @@
-<script lang="ts">
-	import type { PageServerData } from './$types';
-	import {
-		Table,
-		TableBody,
-		TableBodyCell,
-		TableBodyRow,
-		TableHead,
-		TableHeadCell,
-		Checkbox,
-		TableSearch,
-		Button
-	} from 'flowbite-svelte';
-	import Row from '$lib/Row.svelte';
-	export let data: PageServerData;
+<script>
+	import { Card, Progressbar, Heading, Button } from 'flowbite-svelte';
 </script>
 
-<div class="container flex justify-center items-center">
-	<Table shadow>
-		<TableHead>
-			<TableHeadCell>Name</TableHeadCell>
-			<TableHeadCell>Theme</TableHeadCell>
-			<TableHeadCell />
-		</TableHead>
-		<TableBody>
-			{#each data.watches as watch}
-				<Row {watch} />
-			{/each}
-		</TableBody>
-	</Table>
-</div>
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-centermb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Heart Rate</h5>
+	</div>
+	<Heading tag="h2">75/bpm</Heading>
+</Card>
+
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-center mb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Sleep</h5>
+	</div>
+	<Heading tag="h2">9h</Heading>
+</Card>
+
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-center mb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Blood Pessure</h5>
+	</div>
+	<Heading tag="h2">120/80 mmHg</Heading>
+</Card>
+
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-center mb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Home Devices</h5>
+	</div>
+	<Heading tag="h2">Connected</Heading>
+</Card>
+
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-center mb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Sensors</h5>
+	</div>
+	<Heading tag="h2">Connected</Heading>
+</Card>
+
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-center mb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Body Sensors</h5>
+	</div>
+	<Heading tag="h2">Connected</Heading>
+	<Button size="sm" class="w-44 mt-4">View More</Button>
+</Card>
+
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-center mb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Allergy qrcode</h5>
+	</div>
+	<Button size="sm" class="w-44 mt-4">QRCODE</Button>
+</Card>
+
+<Card padding="xl" size="lg">
+	<div class="flex justify-between items-center mb-4">
+		<h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">BlockChain Auth Id</h5>
+	</div>
+	<Button size="sm" class="w-44 mt-4">View Id</Button>
+</Card>

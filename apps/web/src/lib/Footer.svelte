@@ -9,7 +9,7 @@
 	>
 		<FooterLink href="/about">About</FooterLink>
 		<FooterLink href="/privacy">Privacy Policy</FooterLink>
-		<FooterLink href="/Licensing">Licensing</FooterLink>
+		<FooterLink href="/license">Licensing</FooterLink>
 		<FooterLink href="/contact">Contact</FooterLink>
 	</FooterLinkGroup>
 </Footer>
