@@ -12,7 +12,7 @@
 
 <div class="container flex justify-center">
 	<div
-		class="container flex flex-col border border-gray p-10 w-1/2 rounded-lg ml-10 gap-5 flex-wrap overflow-x-auto"
+		class="container grid grid-cols-4 border border-gray p-10 rounded-lg ml-10 gap-5 flex-wrap overflow-x-auto"
 	>
 		<slot />
 	</div>
