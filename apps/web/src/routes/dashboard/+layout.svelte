@@ -1,12 +1,4 @@
 <script>
-	import {
-		Sidebar,
-		SidebarGroup,
-		SidebarItem,
-		SidebarWrapper,
-		SidebarDropdownItem,
-		SidebarDropdownWrapper
-	} from 'flowbite-svelte';
 	let spanClass = 'flex-1 ml-3 whitespace-nowrap';
 </script>
 

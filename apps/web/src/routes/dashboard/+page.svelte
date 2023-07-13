@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, Progressbar, Heading, Button } from 'flowbite-svelte';
+	import { Card, Heading, Button } from 'flowbite-svelte';
 
 	let num: number;
 	function inc() {

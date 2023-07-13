@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-
+import { faker } from '@faker-js/faker';
 function range(start: number, end: number, step: number = 1) {
   const nums = []
   for (let i = start; i < end; i += step) {
@@ -13,7 +13,8 @@ function range(start: number, end: number, step: number = 1) {
   for (const i in range(1, 10)) {
     const watch = await prisma.watch.create({
       data: {
-        name: 'sus amogus',
+        name: faker.person.firstName(),
+        theme: Math.floor(Math.random() * 3)
       },
     });
     console.log(watch);

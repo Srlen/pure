@@ -1,23 +1,22 @@
 <script lang="ts">
 	import type WatchData from './types/watch';
-	import client from './client';
-	import { Button, Card, Input } from 'flowbite-svelte';
+	import { Card, Input } from 'flowbite-svelte';
 	export let watch: WatchData;
 	let show = true;
 	let showInput = false;
 	let rename = '';
-	async function deleteWatch() {
-		await client.watch.deleteWatch(watch.id);
-		show = false;
-	}
+	// async function deleteWatch() {
+	// await client.watch.deleteWatch(watch.id);
+	// show = false;
+	// }
 
-	async function updateWatchName() {
-		await client.watch.updateWatch({
-			id: watch.id,
-			theme: watch.theme,
-			name: rename
-		});
-	}
+	// async function updateWatchName() {
+	// await client.watch.updateWatch({
+	// id: watch.id,
+	// theme: watch.theme,
+	// name: rename
+	// });
+	// }
 	$: ({ name } = watch);
 </script>
 
@@ -32,10 +31,6 @@
 				bind:value={rename}
 				class="w-40"
 			/>
-			{#if showInput}
-				<Button on:click={updateWatchName}>Rename</Button>
-			{/if}
-			<Button on:click={deleteWatch} class="dark:text-white w-fit">Delete</Button>
 		</div>
 	</Card>
 {/if}
